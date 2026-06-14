@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 360px;
+  --shadow-dark: 0px 0px 7px black;
+  --font-sans: "Kumbh Sans", sans-serif;
+  --font-inter: Inter, sans-serif;
+  --text-ss: 0.7rem;
+  --animate-movement:movement 2s ease-in-out forwards;
+  --animate-reverse:reverses 2s ease-in-out forwards;
+  /* --animate-glowing:glowing 2s ease-in-out infinite forwards; */
+}
+
+@keyframes movement {
+  0% {
+    transform: translateX(-300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes reverses {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-300%);
+    opacity: 1;
+  }
+}
+* {
+  
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #1e1e1e;
+}
+/* styling the jodit placeholder */
+
+@media screen and (min-width: 1024px) {
+  .jodit-placeholder {
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .jodit-placeholder {
+    font-size: 0.85rem !important;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 640px) {
+  .jodit-placeholder {
+    font-size: 0.8rem !important;
+  }
+}
+@media screen and (max-width: 639px) and (min-width: 360px) {
+  .jodit-placeholder {
+    font-size: 0.75rem !important;
+  }
+}
+/* swiper => navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  height: 1rem !important;
+  color: yellow !important;
+}
+/* swiper => pagination */
+.swiper-pagination-bullet-active {
+  background-color: yellow !important;
+}
+/* scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
