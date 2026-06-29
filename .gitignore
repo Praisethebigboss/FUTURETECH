@@ -28,3 +28,4 @@ dist-ssr
 src/assets/*.mp4
 src/assets/*.crdownload
 public/*.mp4
+nul

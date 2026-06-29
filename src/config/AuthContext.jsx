@@ -23,15 +23,17 @@ export const AuthProvider = ({ children }) => {
   const [disable, setDisable] = useState(false);
   const [loading, SetLoading] = useState(true);
   const [author, setAuthor] = useState(null);
-  // to get ther user from firebase
   // to get the user from firebase
   useEffect(() => {
+    if (!Auth) {
+      SetLoading(false);
+      return;
+    }
     const unsubscribe = onAuthStateChanged(Auth, (currentUser) => {
       setAuthor(currentUser);
       SetLoading(false);
     });
 
-    // cleanup subscription on unmount
     return () => unsubscribe();
   }, [Auth]);
   //  to log out the data

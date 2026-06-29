@@ -15,6 +15,8 @@ export const TabProvider = ({ children }) => {
   // to bring the all posts
   const [posts, setPosts] = useState([]);
   useEffect(() => {
+    if (!db) return;
+
     const collectionRef = collection(db, "blogs");
 
     // build query depending on activeTab
