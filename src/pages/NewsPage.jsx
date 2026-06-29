@@ -7,6 +7,7 @@ import TabLayout from "../components/ui/TabLayout";
 import AI from "../assets/aiintelligence.jpg";
 import environment from "../assets/environment.jpg";
 import biotech from "../assets/biotech.jpg";
+import { lazy } from "react";
 import health from "../assets/newscol3.png";
 import politics from "../assets/newcol1.png";
 import space from "../assets/space.jpg";
